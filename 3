@@ -1,0 +1,91 @@
+public class Customer 
+{
+	//private variables
+private int customerId;
+private String customername;
+private String customeraddress;
+private long creditcardnumber;
+private long mobilenumber;
+private String productname;
+private double price;
+private int quantity;
+Customer(){}//0-argument constructors
+	public Customer(int customerId, String customername, String customeraddress, long creditcardnumber, long mobilenumber,
+		String productname, double price, int quantity)
+	{
+	super();
+	//conversion of local values to instance values
+	this.customerId = customerId;
+	this.customername = customername;
+	this.customeraddress = customeraddress;
+	this.creditcardnumber = creditcardnumber;
+	this.mobilenumber = mobilenumber;
+	this.productname = productname;
+	this.price = price;
+	this.quantity = quantity;
+}
+	//Setter and Getter to set and get data in private variables
+	public int getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+	public String getCustomername() {
+		return customername;
+	}
+	public void setCustomername(String customername) {
+		this.customername = customername;
+	}
+	public String getCustomeraddress() {
+		return customeraddress;
+	}
+	public void setCustomeraddress(String customeraddress) {
+		this.customeraddress = customeraddress;
+	}
+	public long getCreditcardnumber() {
+		return creditcardnumber;
+	}
+	public void setCreditcardnumber(long creditcardnumber) {
+		this.creditcardnumber = creditcardnumber;
+	}
+	public long getMobilenumber() {
+		return mobilenumber;
+	}
+	public void setMobilenumber(long mobilenumber) {
+		this.mobilenumber = mobilenumber;
+	}
+	public String getProductname() {
+		return productname;
+	}
+	public void setProductname(String productname) {
+		this.productname = productname;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public static void main(String[] args) 
+	{
+		Customer c = new Customer();
+		Customer c1 = new Customer(001, "Vasavi","Vijayawada",1234567878, 987654321, "Grapes", 50.68, 5);
+		System.out.println(c);//print default values
+		System.out.println(c1 );//print given values
+	}
+	@Override
+	public String toString() //Overriding toString method
+	{ 
+		return "Customer [customerId=" + customerId + ", customername=" + customername + ", customeraddress="
+				+ customeraddress + ",\n creditcardnumber=" + creditcardnumber + ", mobilenumber=" + mobilenumber
+				+ ", productname=" + productname + ", price=" + price + ", quantity=" + quantity + "]";
+	}
+	
+}
